@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - WasteAI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                ♻️ WasteAI
+            </div>
+
+            <h1>Create Account</h1>
+
+            <p class="login-subtitle">
+                Create your WasteAI account
+            </p>
+
+
+            <form id="registerForm">
+
+                <label>Name</label>
+                <input 
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Email</label>
+                <input 
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Password</label>
+                <input 
+                    type="password"
+                    placeholder="Create a password"
+                    required
+                >
+
+
+                <label>Confirm Password</label>
+                <input 
+                    type="password"
+                    placeholder="Confirm your password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="register-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert("Account created successfully!");
+
+            window.location.href = "login.html";
+
+        });
+    </script>
+
+</body>
+</html>
