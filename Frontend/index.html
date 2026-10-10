@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Waste Sorting Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">♻️ WasteAI</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="history.html">History</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h1>AI Waste Sorting Assistant</h1>
+
+        <p>
+            Upload an image of waste and let AI identify its category.
+        </p>
+
+    </section>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <div class="upload-card">
+
+            <h2>Analyze Your Waste</h2>
+
+            <div class="upload-box">
+
+                <p>📷 Upload a waste image</p>
+
+                <input 
+                    type="file" 
+                    id="wasteImage" 
+                    accept="image/*"
+                >
+
+                <img id="preview" alt="Waste Image Preview">
+
+            </div>
+
+
+            <button id="analyzeBtn">
+                Analyze Waste
+            </button>
+
+
+            <!-- Result Section -->
+            <div class="result" id="result">
+
+                <h3>AI Analysis Result</h3>
+
+                <p id="category">
+                    Category: -
+                </p>
+
+                <p id="confidence">
+                    Confidence: -
+                </p>
+
+                <p id="suggestion">
+                    Disposal Suggestion: -
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 AI Waste Sorting Assistant
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

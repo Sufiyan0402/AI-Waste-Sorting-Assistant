@@ -1,0 +1,39 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f1f8f4;
+  color-scheme: light;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f1f8f4;
+  color: #1f2937;
+}
+
+input {
+  background: #ffffff;
+  color: #1f2937;
+  color-scheme: light;
+}
+
+h1,
+h2,
+h3,
+label {
+  color: #111827;
+}
