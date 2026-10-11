@@ -43,7 +43,7 @@ app.post("/api/analyze", upload.single("image"), async (req, res) => {
 
         // Updated to gemini-3.8-flash model as requested by API
         const response = await ai.models.generateContent({
-            model: "gemini-3.8-flash",
+            model: "gemini-3.6-flash",
             contents: [prompt, imagePart],
         });
 
