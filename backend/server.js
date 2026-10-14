@@ -41,11 +41,28 @@ app.post("/api/analyze", upload.single("image"), async (req, res) => {
           "suggestion": "..."
         }`;
 
-        // Updated to gemini-3.8-flash model as requested by API
-        const response = await ai.models.generateContent({
-            model: "gemini-3.6-flash",
-            contents: [prompt, imagePart],
-        });
+             const models = [
+            "gemini-3.6-flash",
+            "gemini-3.5-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite"
+        ];
+        let response;
+        let lastError;
+        for (const m of models) {
+            try {
+                response = await ai.models.generateContent({
+                    model: m,
+                    contents: [prompt, imagePart],
+                });
+                break;
+            } catch (err) {
+                lastError = err;
+                console.error("Model failed:", m, err.status);
+            }
+        }
+        if (!response) throw lastError;
 
         let textResponse = response.text.trim();
         
